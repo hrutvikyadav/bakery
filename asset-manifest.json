@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.85768c17.css",
+    "main.js": "/static/js/main.d526638c.js",
+    "static/js/787.b2a56feb.chunk.js": "/static/js/787.b2a56feb.chunk.js",
+    "static/media/pexels-tina-nord-1775283.jpg": "/static/media/pexels-tina-nord-1775283.f1213d33704ae77e456d.jpg",
+    "static/media/t1.png": "/static/media/t1.e9a0d0ebafc036e0b51a.png",
+    "static/media/c2.jpg": "/static/media/c2.4883b02ac0377b782072.jpg",
+    "static/media/aniversary.jpg": "/static/media/aniversary.b6e5dca3ece2d97a0ba2.jpg",
+    "index.html": "/index.html",
+    "main.85768c17.css.map": "/static/css/main.85768c17.css.map",
+    "main.d526638c.js.map": "/static/js/main.d526638c.js.map",
+    "787.b2a56feb.chunk.js.map": "/static/js/787.b2a56feb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85768c17.css",
+    "static/js/main.d526638c.js"
+  ]
+}
