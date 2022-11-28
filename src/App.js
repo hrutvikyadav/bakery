@@ -4,7 +4,15 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, CardGroup, Carousel, Col, Image, Row } from "react-bootstrap";
+import {
+  Button,
+  Card,
+  CardGroup,
+  Carousel,
+  Col,
+  Image,
+  Row,
+} from "react-bootstrap";
 import logo from "./images/pexels-tina-nord-1775283.jpg";
 import carouselItem from "./images/c2.jpg";
 import testimonial from "./images/t1.png";
@@ -75,9 +83,20 @@ class App extends Component {
 
   render() {
     let items = this.state.bakeryItems;
+    const desc = [
+      this.state.cookie1,
+      this.state.cookie2,
+      this.state.cookie3,
+      this.state.cookie4,
+    ];
     return (
       <div>
-        <Navbar bg="dark" variant="dark" expand="lg" className="navbar-static-top" >
+        <Navbar
+          bg="dark"
+          variant="dark"
+          expand="lg"
+          className="navbar-static-top"
+        >
           <Container>
             <Navbar.Brand>Bakery App</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -147,15 +166,18 @@ class App extends Component {
             </Col>
           </Row>
           <Row sm={1} md={2} lg={2}>
-            {items.map((i) => (
+            {desc.map((d) => (
               <Col>
-                <Card key={i}>
+                <Card key={d}>
                   <Card.Img variant="top" alt="Img for" src={logo} />
                   <Card.Body>
-                    <Card.Title>{i}</Card.Title>
-                    <Card.Text>
-                      1st cookiee is {this.state.cookie1.description}
-                    </Card.Text>
+                    <Card.Title>
+                      {d.name}{" "}
+                      <span>
+                        <Button className='position-absolute end-0' variant="primary">Rs {d.price}/-</Button>
+                      </span>
+                    </Card.Title>
+                    <Card.Text>1st cookiee is {d.description}</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -202,25 +224,25 @@ class App extends Component {
         </Container>
         <Navbar bg="dark" variant="dark" className="navbar-static-bottom">
           <Container>
-          <Nav>
-            <Navbar.Brand>Bakery App</Navbar.Brand>
-            <Nav.Item>
-              <Nav.Link eventKey="disabled" disabled>
-                Copyright
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="link-2" href="www.facebook.com">
-                Facebook
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="link-2" href="www.instagram.com">
-                Instagram
-              </Nav.Link>
-            </Nav.Item>
-          </Nav>
-        </Container>
+            <Nav>
+              <Navbar.Brand>Bakery App</Navbar.Brand>
+              <Nav.Item>
+                <Nav.Link eventKey="disabled" disabled>
+                  Copyright
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="link-2" href="www.facebook.com">
+                  Facebook
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="link-2" href="www.instagram.com">
+                  Instagram
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
+          </Container>
         </Navbar>
       </div>
     );
